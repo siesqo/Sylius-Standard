@@ -40,3 +40,6 @@
 /config/jwt/*.pem
 !/config/jwt/*-test.pem
 ###< lexik/jwt-authentication-bundle ###
+
+# Custom for Siesqo
+.idea
