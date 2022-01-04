@@ -43,6 +43,9 @@
     "behat/transliterator": {
         "version": "v1.2.0"
     },
+    "bitbag/cms-plugin": {
+        "version": "v3.0.8"
+    },
     "clue/stream-filter": {
         "version": "v1.4.0"
     },
@@ -172,6 +175,18 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.3"
     },
+    "friendsofsymfony/ckeditor-bundle": {
+        "version": "2.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "f5ad42002183a6881962683e6d84bbb25cdfce5d"
+        },
+        "files": [
+            "config/packages/fos_ckeditor.yaml"
+        ]
+    },
     "friendsofsymfony/rest-bundle": {
         "version": "2.2",
         "recipe": {
@@ -258,6 +273,9 @@
     },
     "lcobucci/jwt": {
         "version": "3.3.2"
+    },
+    "league/csv": {
+        "version": "9.8.0"
     },
     "league/uri": {
         "version": "5.3.0"
