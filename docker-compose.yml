@@ -30,7 +30,7 @@ services:
       - public-media:/srv/sylius/public/media:rw
 
   mysql:
-    image: percona:5.7
+    image: mariadb:latest
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-nopassword}
       - MYSQL_DATABASE=sylius
