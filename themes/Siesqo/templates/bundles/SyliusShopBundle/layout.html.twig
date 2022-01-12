@@ -21,32 +21,34 @@
 
 <body class="d-flex flex-column min-vh-100">
 {{ sylius_template_event('sylius.shop.layout.before_body') }}
+<div id="root">
 
-{% block top %}
-    <nav class="bg-dark navbar navbar-expand-lg">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    {% block top %}
+        <nav class="bg-dark navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarTop">
-            {{ sylius_template_event('sylius.shop.layout.topbar') }}
-        </div>
-    </nav>
-{% endblock %}
-
-{% block header %}
-    {{ sylius_template_event('sylius.shop.layout.header') }}
-{% endblock %}
-
-<div class="main-content container">
-    {% include '@SyliusShop/_flashes.html.twig' %}
-
-    {{ sylius_template_event('sylius.shop.layout.before_content') }}
-
-    {% block content %}
+            <div class="collapse navbar-collapse" id="navbarTop">
+                {{ sylius_template_event('sylius.shop.layout.topbar') }}
+            </div>
+        </nav>
     {% endblock %}
 
-    {{ sylius_template_event('sylius.shop.layout.after_content') }}
+    {% block header %}
+        {{ sylius_template_event('sylius.shop.layout.header') }}
+    {% endblock %}
+
+    <div class="main-content container">
+        {% include '@SyliusShop/_flashes.html.twig' %}
+
+        {{ sylius_template_event('sylius.shop.layout.before_content') }}
+
+        {% block content %}
+        {% endblock %}
+
+        {{ sylius_template_event('sylius.shop.layout.after_content') }}
+    </div>
 </div>
 
 {% block footer %}
