@@ -1,0 +1,12 @@
+{% import "@SyliusShop/Common/Macro/money.html.twig" as money %}
+{% import "@SyliusShop/Common/Macro/icons.html.twig" as icons %}
+
+<button class="btn btn-dark d-flex align-items-center dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        type="button"
+        id="sylius-cart-total" {{ sylius_test_html_attribute('cart-total') }}>
+    <span class="pe-3">{{ money.convertAndFormat(cart.itemsTotal) }}</span>
+    <span>{{ icons.cart('h3 m-0') }}</span>
+    <span class="badge badge-pill bg-primary" style="transform: translate(-8px, 10px)">{{ cart.items|length }}</span>
+</button>

@@ -44,4 +44,21 @@ adminConfig.resolve.alias['sylius/bundle'] = syliusBundles;
 adminConfig.externals = Object.assign({}, adminConfig.externals, { window: 'window', document: 'document' });
 adminConfig.name = 'admin';
 
-module.exports = [shopConfig, adminConfig];
+Encore.reset();
+
+// Siesqo Theme config
+Encore
+  .setOutputPath('public/bootstrap-theme')
+  .setPublicPath('/bootstrap-theme')
+  .addEntry('app', './themes/Siesqo/assets/entry.js')
+  .disableSingleRuntimeChunk()
+  .cleanupOutputBeforeBuild()
+  .enableSassLoader()
+  .enableSourceMaps(!Encore.isProduction())
+  .enableVersioning(Encore.isProduction())
+  });
+
+const siesqoThemeConfig = Encore.getWebpackConfig();
+siesqoThemeConfig.name = 'siesqoTheme';
+
+module.exports = [shopConfig, adminConfig, siesqoThemeConfig];

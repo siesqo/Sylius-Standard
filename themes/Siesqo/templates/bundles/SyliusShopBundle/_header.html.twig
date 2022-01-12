@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{{ path('sylius_shop_homepage') }}">
+            <img src="{{ asset('_themes/siesqo/bootstrap-theme/img/logo.svg') }}" width="372.6" height="102" alt="{{ sylius.channel.name }}"/>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbar-collapse" class="collapse navbar-collapse">
+            <div class="navbar-nav d-flex flex-column w-100">
+                <div class="main-nav-group d-lg-flex justify-content-end align-items-center">
+                    {% include '@SyliusShop/Layout/Header/_cart.html.twig' %}
+
+                    {% if taxons is defined and taxons|length > 0 %}
+                        <div class="col-auto d-lg-none ml-2">
+                            <div class="navbar-light">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

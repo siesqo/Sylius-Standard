@@ -1,0 +1,1 @@
+/Users/alessandro/sites/sylius-standard/vendor/friendsofsymfony/ckeditor-bundle/src/Resources/public/plugins/exportpdf/tests/manual/integrations/easyimage.md

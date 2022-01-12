@@ -1,0 +1,33 @@
+.navbar-toggler {
+    border: none;
+
+    &:focus {
+        outline: $primary;
+    }
+}
+
+.navbar-brand {
+    width: 60%;
+    max-width: 299px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include media-breakpoint-up(lg) {
+        width: auto;
+        max-width: 275px;
+        height: 100%;
+    }
+
+    @include media-breakpoint-up(xl) {
+        max-width: 325px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+
+        @include media-breakpoint-up(lg) {
+            height: 100%;
+        }
+    }
+}

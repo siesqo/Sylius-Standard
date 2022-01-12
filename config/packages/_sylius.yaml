@@ -6,7 +6,7 @@ imports:
 
     - { resource: "@SyliusShopBundle/Resources/config/app/config.yml" }
     - { resource: "@SyliusPayPalPlugin/Resources/config/config.yaml" }
-        
+
     - { resource: "@BitBagSyliusCmsPlugin/Resources/config/config.yml" }
 
 parameters:
@@ -240,4 +240,5 @@ sylius_theme:
         filesystem:
             scan_depth: 1
             directories:
+                - "%kernel.project_dir%/vendor/sylius/bootstrap-theme"
                 - "%kernel.project_dir%/themes"

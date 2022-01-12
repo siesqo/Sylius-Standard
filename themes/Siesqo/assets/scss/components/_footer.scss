@@ -1,0 +1,162 @@
+footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    a {
+        color: $white;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    .nav {
+        flex-direction: column;
+        text-align: center;
+
+        .nav-link {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .nav-link.disabled {
+            color: $white;
+        }
+
+        #websiteBuilderCredits {
+            padding-top: 2rem;
+        }
+    }
+}
+
+.footer-logo {
+
+    div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-brand {
+        width: 50%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin: 0;
+    }
+}
+
+.main-footer-content {
+    padding-bottom: 4rem;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+
+        div {
+            padding-bottom: 3rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+
+    .footer-logo {
+
+        .navbar-brand {
+            width: 193.121px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+
+    .footer-logo {
+
+        div {
+            justify-content: flex-start;
+        }
+
+        .navbar-brand {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    .main-footer-content {
+        padding-bottom: 2rem;
+
+        > div {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+        }
+    }
+
+    footer {
+
+        .nav {
+            flex-direction: row;
+            text-align: left;
+
+            .nav-link {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .nav-link.disabled {
+                padding-left: 0;
+            }
+
+            #websiteBuilderCredits {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+// Back to top
+#backToTop {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color: $white;
+}
+
+#backToTop {
+    &:hover,
+    &:active,
+    &:focus {
+
+        .fa {
+            color: white !important;
+        }
+    }
+}
+
+#websiteBuilderCredits {
+    @include media-breakpoint-up(lg) {
+        margin-left: auto;
+    }
+
+    .nav-link {
+        padding-right: 0;
+    }
+
+    a {
+        svg {
+            display: inline-block;
+            vertical-align: baseline;
+            width: 110px;
+        }
+
+        &:hover svg g {
+            fill: $primary;
+        }
+    }
+}

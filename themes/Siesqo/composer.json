@@ -1,0 +1,17 @@
+{
+    "name": "siesqo/bootstrap-theme",
+    "description": "Siesqo Bootstrap theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alessandro Craeye",
+            "email": "alessandro@siesqo.be"
+        }
+    ],
+    "extra": {
+        "sylius-theme": {
+            "title": "Siesqo Bootstrap theme",
+            "parents": [ "sylius/bootstrap-theme" ]
+        }
+    }
+}
