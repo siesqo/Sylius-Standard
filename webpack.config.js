@@ -69,6 +69,14 @@ Encore
       },
     }],
   })
+  .addRule({
+    test: /\.js$|jsx/,
+    exclude: /node_modules/,
+    loaders: 'babel-loader',
+    query: {
+      cacheDirectory: true,
+      presets: ['@babel/preset-env'],
+    },
   });
 
 const siesqoThemeConfig = Encore.getWebpackConfig();
