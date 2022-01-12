@@ -57,6 +57,9 @@ Encore
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(Encore.isProduction())
   .autoProvidejQuery()
+  .autoProvideVariables({
+    Popper: ['popper.js', 'default'],
+  })
   });
 
 const siesqoThemeConfig = Encore.getWebpackConfig();
