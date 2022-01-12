@@ -60,6 +60,15 @@ Encore
   .autoProvideVariables({
     Popper: ['popper.js', 'default'],
   })
+  .addRule({
+    test: /\.scss$/,
+    use: [{
+      loader: 'sass-loader',
+      options: {
+        includePaths: ['node_modules/'],
+      },
+    }],
+  })
   });
 
 const siesqoThemeConfig = Encore.getWebpackConfig();
