@@ -56,6 +56,7 @@ Encore
   .enableSassLoader()
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(Encore.isProduction())
+  .autoProvidejQuery()
   });
 
 const siesqoThemeConfig = Encore.getWebpackConfig();
