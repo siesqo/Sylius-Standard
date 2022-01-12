@@ -236,6 +236,7 @@ sylius_shop:
         include_all_descendants: true
 
 sylius_theme:
+    legacy_mode: true # for sylius 1.9 and 1.10 (since ThemeBundle 2.0 doesn't work yet...)
     sources:
         filesystem:
             scan_depth: 1
